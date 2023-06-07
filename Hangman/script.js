@@ -11,20 +11,20 @@ const resultText = document.getElementById("result-text");
 let options = {
   fruits: [
     "Apple",
-    "Blueberry",
-    "Mandarin",
+    "Orange",
+    "Coconut",
     "Pineapple",
-    "Pomegranate",
+    "Pineapple",
     "Watermelon",
   ],
-  animals: ["Hedgehog", "Rhinoceros", "Squirrel", "Panther", "Walrus", "Zebra"],
+  animals: ["Dog", "Rhinoceros", "Squirrel", "Panther", "Walrus", "Zebra"],
   countries: [
     "India",
     "Hungary",
-    "Kyrgyzstan",
+    "Nigeria",
     "Switzerland",
     "Zimbabwe",
-    "Dominica",
+    "Kenya",
   ],
 };
 
