@@ -55,7 +55,7 @@ const blocker = () => {
 
   //disable all letters
   letterButtons.forEach((button) => {
-    button.disabled.true;
+    button.disabled = true;
   });
   newGameContainer.classList.remove("hide");
 };
@@ -92,7 +92,7 @@ const initializer = () => {
   winCount = 0;
   count = 0;
 
-  //Initially erase all content and hide letteres and new game button
+  //Initially erase all content and hide letters and new game button
   userInputSection.innerHTML = "";
   optionsContainer.innerHTML = "";
   letterContainer.classList.add("hide");
@@ -109,7 +109,7 @@ const initializer = () => {
     button.addEventListener("click", () => {
       let charArray = chosenWord.split("");
       let dashes = document.getElementsByClassName("dashes");
-      //if array contains clciked value replace the matched dash with letter else dram on canvas
+      //if array contains clicked value replace the matched dash with letter else draw on canvas
       if (charArray.includes(button.innerText)) {
         charArray.forEach((char, index) => {
           //if character in array is same as clicked button
@@ -118,8 +118,8 @@ const initializer = () => {
             dashes[index].innerText = char;
             //increment counter
             winCount += 1;
-            //if winCount equals word lenfth
-            if (winCount == charArray.length) {
+            //if winCount equals word length
+            if (winCount === charArray.length) {
               resultText.innerHTML = `<h2 class='win-msg'>You Win!!</h2><p>The word was <span>${chosenWord}</span></p>`;
               //block all buttons
               blocker();
@@ -131,8 +131,8 @@ const initializer = () => {
         count += 1;
         //for drawing man
         drawMan(count);
-        //Count==6 because head,body,left arm, right arm,left leg,right leg
-        if (count == 6) {
+        //Count == 6 because head, body, left arm, right arm, left leg, right leg
+        if (count === 6) {
           resultText.innerHTML = `<h2 class='lose-msg'>You Lose!!</h2><p>The word was <span>${chosenWord}</span></p>`;
           blocker();
         }

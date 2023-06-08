@@ -15,7 +15,15 @@
     <div class="container">
       <div id="options-container"></div>
       <div id="letter-container" class="letter-container hide"></div>
-      <div id="user-input-section"></div>
+      <div id="user-input-section">
+        <form id="player-form">
+          <label for="player1">Player 1:</label>
+          <input type="text" id="player1" name="player1" required /><br />
+          <label for="player2">Player 2:</label>
+          <input type="text" id="player2" name="player2" required /><br />
+          <button type="submit">Start Game</button>
+        </form>
+      </div>
       <canvas id="canvas"></canvas>
       <div id="new-game-container" class="new-game-popup hide">
         <div id="result-text"></div>
@@ -26,3 +34,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+
